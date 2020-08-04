@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <title>Seawar</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+    
+    function faire ( str ){
+        if ( str == 'A1') alert ( 'Ранен' );
+        else alert ( 'МИМО' );
+    }
+    
+    </script>
 </head>
 <body>
  
  <header class="header1">
-  <p> 
+
   <h2>Player: 1</h2> 
  <main class="main">
    
@@ -38,7 +46,7 @@
    
    
        <div class="letter">1</div>
-       <div></div>
+       <div id="A1" onclick = "faire ( 'A1' )"></div>
        <div></div>
        <div></div>
        <div></div>
@@ -51,7 +59,7 @@
        
    
      
-     
+      
      
  </main> 
    
@@ -218,7 +226,7 @@
  </main> 
     
     
- </p>   
+  
     
   </header>  
     
