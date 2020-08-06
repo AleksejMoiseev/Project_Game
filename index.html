@@ -28,13 +28,20 @@
                        output ( harborArr[i].counter+=1, i );
                        soundClick();
                        discounter = 1;
+                   
 
                } 
                else if ( harborArr[i].twofinger == str ) {
                        output ( harborArr[i].counter+=1, i );
                        soundClick();
                        discounter = 1;
-                       harborArr[i].counter++;
+                       
+               }
+                else if ( harborArr[i].threefinger == str ) {
+                       output ( harborArr[i].counter+=1, i ); 
+                       soundClick();
+                       discounter = 1;
+                      
                }
 
             }
@@ -51,7 +58,7 @@
             this.twofinger =twofinger;
             this.threefinger = threefinger;
             this.fourfinger = fourfinger;
-            this.counter =counter;
+            this.counter = counter;
         }
         var oneFingerShips = {
             finger: 1,
@@ -65,7 +72,7 @@
             twofinger: 'H2',
             counter: 0,
         }
-        var threeFingerShips = new FingerShips ( 3, 'A9', 'B9', 'C9', 0);
+        var threeFingerShips = new FingerShips ( 3, 'A9', 'B9', 'C9', 0, 0);
         harborArr[0] = oneFingerShips;
         harborArr[1] = twoFingerShips;
         harborArr[2] = threeFingerShips;
@@ -108,15 +115,15 @@
    
        <div class="letter">1</div>
        <div id="A1" onclick = " faire ( 'A1' )"></div>
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
-        <div id="H1" onclick = "faire ( 'H1' )" ></div>
-       <div></div>
-       <div></div>
+       <div id="B1" onclick = " faire ( 'B1' )"></div>
+       <div id="C1" onclick = " faire ( 'C1' )"></div>
+       <div id="D1" onclick = " faire ( 'D1' )"></div>
+       <div id="E1" onclick = " faire ( 'E1' )"></div>
+       <div id="F1" onclick = " faire ( 'F1' )"></div>
+       <div id="G1" onclick = " faire ( 'G1' )"></div>
+       <div id="H1" onclick = " faire ( 'H1' )" ></div>
+       <div id="I1" onclick = " faire ( 'I1' )"></div>
+       <div id="L1" onclick = " faire ( 'L1' )"></div>
        
    
      
@@ -270,9 +277,9 @@
    
    
        <div class="letter">9</div>
-       <div></div>
-       <div></div>
-       <div></div>
+       <div id="A9" onclick = "faire ( 'A9' )"></div>
+       <div id="B9" onclick = "faire ( 'B9' )"></div>
+       <div id="C9" onclick = "faire ( 'C9' )"></div>
        <div></div>
        <div></div>
        <div></div>
