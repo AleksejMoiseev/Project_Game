@@ -5,18 +5,79 @@
     <title>Seawar</title>
     <link rel="stylesheet" href="index.css">
     <script>
-    
-    function faire ( str ){
-        if ( str == 'A1') alert ( 'Ранен' );
-        else alert ( 'МИМО' );
-    }
-    
+        function soundClick() {
+            var audio = new Audio(); // Создаём новый элемент Audio
+            audio.src = 'V.mp3'; // Указываем путь к звуку "клика"
+            audio.autoplay = true; // Автоматически запускаем
+            }
+         function soundClickPast() {
+            var audio = new Audio(); 
+            audio.src = 'soundPast.mp3'; 
+            audio.autoplay = true; 
+        }
+        
+        function output ( n, i ){
+            if ( harborArr[i].finger == n) alert ( "Убит" );
+            else alert ( "Ранен" );
+        }
+
+        function faire ( str ){
+            var discounter = 0;
+            for ( var i = 0; i < harborArr.length; i++ ){
+               if ( harborArr[i].onefinger == str ){
+                       output ( harborArr[i].counter+=1, i );
+                       soundClick();
+                       discounter = 1;
+
+               } 
+               else if ( harborArr[i].twofinger == str ) {
+                       output ( harborArr[i].counter+=1, i );
+                       soundClick();
+                       discounter = 1;
+                       harborArr[i].counter++;
+               }
+
+            }
+            if ( !discounter ) {
+                alert ( 'Промах');
+                soundClickPast();
+            }
+        }
+        var harborArr = [];
+        function FingerShips
+            ( finger, onefinger, twofinger, threefinger, fourfinger, counter){
+            this.finger = finger;
+            this.onefinger = onefinger;
+            this.twofinger =twofinger;
+            this.threefinger = threefinger;
+            this.fourfinger = fourfinger;
+            this.counter =counter;
+        }
+        var oneFingerShips = {
+            finger: 1,
+            onefinger: 'A1',
+            counter: 0,
+
+        }
+        var twoFingerShips = {
+            finger: 2,
+            onefinger: 'H1',
+            twofinger: 'H2',
+            counter: 0,
+        }
+        var threeFingerShips = new FingerShips ( 3, 'A9', 'B9', 'C9', 0);
+        harborArr[0] = oneFingerShips;
+        harborArr[1] = twoFingerShips;
+        harborArr[2] = threeFingerShips;
+
     </script>
 </head>
 <body>
  
  <header class="header1">
-
+<audio src="V.mp3" autoplay="autoplay"></audio>
+<audio src="soundPast.mp3" autoplay="autoplay"></audio>
+ 
   <h2>Player: 1</h2> 
  <main class="main">
    
@@ -43,17 +104,17 @@
     
     <main class="main">
    
-   
+<audio src="V.mp3" autoplay="autoplay"></audio>   
    
        <div class="letter">1</div>
-       <div id="A1" onclick = "faire ( 'A1' )"></div>
+       <div id="A1" onclick = " faire ( 'A1' )"></div>
        <div></div>
        <div></div>
        <div></div>
        <div></div>
        <div></div>
        <div></div>
-       <div></div>
+        <div id="H1" onclick = "faire ( 'H1' )" ></div>
        <div></div>
        <div></div>
        
@@ -72,11 +133,11 @@
        <div></div>
        <div></div>
        <div></div>
+       <div id="E2" onclick = "faire ( 'E2' )"></div>
        <div></div>
        <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
+       <div id="H2" onclick = "faire ( 'H2' )"></div>
+       <div  ></div>
        <div></div>
        
    
