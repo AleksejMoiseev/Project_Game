@@ -5,6 +5,23 @@
     <title>Seawar</title>
     <link rel="stylesheet" href="index.css">
     <script>
+        
+        var messangArr = [];
+        messangArr[0] = "Вот это шарахнуло, ранил чорт возьми";
+        messangArr[1] = "Полундра свистать всех на верх ранили";
+        messangArr[2] = "Чертово пекло ранение";
+        messangArr[3] = "Отличный выстрел, соколиный глаз";
+        messangArr[4] = "Попал, ранил";
+         
+       function randChoice (){
+           var randvalue = Math.floor ( Math.random() * 5 );
+           return randvalue;
+       }
+       function wound (){
+           var randWound = randChoice ();
+           var strWound = messangArr[ randWound ];
+           return strWound;
+       } 
        
         function soundClick() {
             var audio = new Audio(); // Создаём новый элемент Audio
@@ -19,7 +36,7 @@
         
         function output ( n, i ){
             if ( harborArr[i].finger == n) info.innerText = "Убит";
-            else info.innerText = "Ранен";
+            else info.innerText = wound();
         }
 
         function faire ( str ){
@@ -51,6 +68,8 @@
                 soundClickPast();
             }
         }
+       
+       
         var harborArr = [];
         function FingerShips
             ( finger, onefinger, twofinger, threefinger, fourfinger, counter){
@@ -144,7 +163,7 @@
        <div id="E2" onclick = "faire ( 'E2' )"></div>
        <div></div>
        <div></div>
-       <div id="H2" onclick = "faire ( 'H2' )"></div>
+        <div id="H2" onclick = "faire ( 'H2' )"></div>
        <div  ></div>
        <div></div>
        
