@@ -48,9 +48,17 @@ div:hover{
     float: left;
 }
 .mainbootom{
-    float: left;
-    
-
-        
-        
+    float: left;      
+}
+#info{
+    width: 200px;
+    height: 40px;
+    color: red;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 400px;
+    font-size: xx-large;
+    font-weight: 900;
 }

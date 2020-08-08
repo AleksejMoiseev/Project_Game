@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Seawar</title>
     <link rel="stylesheet" href="index.css">
     <script>
+       
         function soundClick() {
             var audio = new Audio(); // Создаём новый элемент Audio
             audio.src = 'V.mp3'; // Указываем путь к звуку "клика"
@@ -17,8 +18,8 @@
         }
         
         function output ( n, i ){
-            if ( harborArr[i].finger == n) alert ( "Убит" );
-            else alert ( "Ранен" );
+            if ( harborArr[i].finger == n) info.innerText = "Убит";
+            else info.innerText = "Ранен";
         }
 
         function faire ( str ){
@@ -46,7 +47,7 @@
 
             }
             if ( !discounter ) {
-                alert ( 'Промах');
+                info.innerText = "Промах";
                 soundClickPast();
             }
         }
@@ -84,7 +85,7 @@
  <header class="header1">
 <audio src="V.mp3" autoplay="autoplay"></audio>
 <audio src="soundPast.mp3" autoplay="autoplay"></audio>
- 
+
   <h2>Player: 1</h2> 
  <main class="main">
    
@@ -513,7 +514,7 @@
     
   </header>  
     
-
+ <div id="info"></div>
     
 </body>
 </html>
