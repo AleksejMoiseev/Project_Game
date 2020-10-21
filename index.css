@@ -1,0 +1,64 @@
+body{
+  background-image: url(image/Batle%20of%20the%20Java%20Sea.JPG)
+}
+h2{
+    text-align: center;
+}
+
+header{
+    width: 400px;
+    height: 400px;
+
+  
+        
+}
+.header1{
+    float:left;
+    margin-top: 100px;
+    padding-left: 20px;
+}
+.header2{
+    float:right;
+    margin-top: 110px;
+}
+div{
+    width: 30px;
+    height: 30px;
+    color: aqua;
+    border: 1px solid blue;
+    background-color: aqua;
+    margin: 1px;
+}
+
+div:hover{
+    color:white;
+    background-color: blue;
+}
+.letter{
+    color: black;
+  text-align: center;
+    vertical-align: middle;
+    font-weight: 800;
+    font-family: monospace; 
+    
+}
+.main{
+    
+  
+    float: left;
+}
+.mainbootom{
+    float: left;      
+}
+#info{
+    width: 600px;
+    height: 40px;
+    color: red;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 250px;
+    font-size: xx-large;
+    font-weight: 900;
+}

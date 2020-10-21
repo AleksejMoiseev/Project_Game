@@ -1,0 +1,86 @@
+   * {
+        margin: 0;
+        padding: 0;
+        background: #7CA0C7;
+    }
+    .fields {
+        position: relative;
+        width: 1280px;
+        height: 960px;
+      
+        border: 2px solid black;
+    }
+    .field {
+        width: 600px;
+        height: 600px;
+        background: #fff;
+       
+    }
+    .field div {
+        width: 52.5px;
+        height: 52.5px;
+        float: left;
+        margin: 1px;
+        background-color: aquamarine;
+    }
+    .field div:hover {
+        background: #ccc;
+    }
+    .field div:active {
+        background: red;
+    }
+    .first, .second {
+        position: absolute;
+        top: 25%;
+    }
+    .first {
+        left: 25px;
+    }
+    .second {
+        right: 25px;
+    }
+    h1{
+        text-align-last: center;
+    }
+    .info{
+        width: 1000px;
+        height: 100px;
+        float: right;
+        padding-right: 20px;
+        margin-top: 60px;
+        margin-right: 46px;
+        padding-left: 2px;
+        
+    }
+    .img{
+        width: 150px;
+        height: 225px;
+        position: absolute;
+        padding: 10px;
+        margin-left: 12px;
+    }
+    #letter{
+        display: table-cell;
+        color: black;
+        vertical-align:middle;
+        text-align: center;
+        float: inherit;
+        font-weight: 800;
+        font-family: monospace;
+        background:rgb(18,190,240);
+        border: 1px solid white;
+        font-size: x-large;
+
+    }
+#numeral{
+     
+        color: black;
+        display: table-cell;
+        text-align: center;
+        font-weight: 800;
+        font-family: monospace;
+        background:rgb(18,190,240);
+        font-size: x-large;
+    
+        }
+
