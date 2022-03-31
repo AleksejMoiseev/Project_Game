@@ -1,0 +1,42 @@
+validationError:
+  type: array
+  items:
+    type: object
+    required:
+      - loc
+      - msg
+      - type
+    properties:
+      loc:
+        type: array
+        items:
+          type: string
+      msg:
+        type: string
+      type:
+        type: string
+  example:
+    - loc:
+        - period_start_at
+      msg: field required
+      type: value_error.missing
+
+appError:
+  type: array
+  items:
+    type: object
+    required:
+      - type
+      - msg
+      - ctx
+    properties:
+      msg:
+        type: string
+      type:
+        type: string
+      ctx:
+        type: object
+  example:
+    - type: permission_denied
+      msg: Доступ к ресурсу [foo] запрещен
+      ctx: {}
