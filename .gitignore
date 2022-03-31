@@ -1,5 +1,27 @@
-# Object file
-*.o
+/__pycache__/
+.pytest_cache/
+.idea/
+cpython-38-pytest
+PYtest/__pycache__/test_wiht_comments.cpython-38-pytest-6.2.3.pyc
+PYtest/person/__pycache__/person.cpython-38.pyc
+PYtest/__pycache__/
+/PYtest/person/__pycache__/
+PYtest/person/__pycache__/__init__.cpython-38.pyc
+__pycache__/test_person.cpython-38-pytest-6.2.3.pyc
+__pycache__/unit_test.cpython-38-pytest-6.2.3.pyc
+unit_person/__pycache__/
+person/__pycache__/
+/person/__pycache__/.pytest_cache
+__pycache__
+.pytest_cache
+.gitignore
+.idea
 
-# Ada Library Information
-*.ali
+
+
+
+
+
+
+
+
