@@ -1,9 +1,20 @@
 from kombu import Connection, Exchange, Queue
+from message_bus.settings import settings
+from message_bus import RabbitConfigKombu
 
-media_exchange = Exchange('amq.direct', 'direct', durable=True)
-video_queue = Queue('My_Queu', exchange=media_exchange, routing_key='test')
+media_exchange = Exchange(
+    RabbitConfigKombu.exchange.value,
+    RabbitConfigKombu.exchange_type.value,
+    durable=True
+)
 
-connection = Connection('amqp://user:password@localhost:5672//')
+video_queue = Queue(
+    RabbitConfigKombu.queue.value,
+    exchange=media_exchange,
+    routing_key=RabbitConfigKombu.routing_key.value
+)
+
+connection = Connection(settings.BROKER_URL)
 
 
 def process_media(body, message):
