@@ -16,7 +16,7 @@ class MessageBus:
     )
 
     #publisher.plan(Message('OrderPlaced', {'order_number': 111111111111111}))
-    publisher.plan(Message(ExchangeFanout.exchange.value, {'order_number': '1026658'}))
+    publisher.plan(Message(ExchangeFanout.exchange.value, {'order_number': 34532}))
     publisher.flush()
 
 
