@@ -1,5 +1,7 @@
 import pytest
 
 
-def test_fan():
+
+
+def test_mark():
     assert 1 == 1
