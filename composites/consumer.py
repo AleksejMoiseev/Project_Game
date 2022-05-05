@@ -1,7 +1,7 @@
 import logging
 
 from kombu import Connection
-from rabbit_app import message_bus
+from adapters import message_bus
 
 logging.basicConfig(level=logging.INFO)
 
@@ -15,10 +15,5 @@ class MessageBus:
         connection
     )
 
-    consumer_with_routing_key = message_bus.create_consumer_with_routing_key(
-        connection
-    )
 
-
-#MessageBus.consumer.run()
-MessageBus.consumer_with_routing_key.run()
+MessageBus.consumer.run()

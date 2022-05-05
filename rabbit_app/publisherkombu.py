@@ -25,7 +25,7 @@ def process_media(body, message):
 with connection as conn:
     producer = conn.Producer(serializer='json')
     producer.publish(
-        {'name': 'My_message', 'size': 2},
+        {'name': 'My_message', 'size': 4444444444},
         exchange=media_exchange, routing_key='test',
         declare=[video_queue],
     )
